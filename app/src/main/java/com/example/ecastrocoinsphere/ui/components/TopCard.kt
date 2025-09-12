@@ -17,6 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ecastrocoinsphere.ui.theme.Surface
+import com.example.ecastrocoinsphere.ui.theme.TextDim
+import com.example.ecastrocoinsphere.ui.theme.TextMain
 
 @Composable
 fun TopCard(textS: String, textI: String) {
@@ -35,13 +37,13 @@ fun TopCard(textS: String, textI: String) {
         ) {
             Text(
                 text = textS,
-                color = Color.Gray,
+                color = TextDim,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = textI,
-                color = Color.White,
+                color = TextMain,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold
             )
