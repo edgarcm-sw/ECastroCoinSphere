@@ -33,9 +33,9 @@ fun HomeScreen(innerPadding: PaddingValues) {
     )
 
     val topCriptos = listOf(
-        Cripto("1", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
-        Cripto("2", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
-        Cripto("3", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
+        Cripto("1", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
+        Cripto("2", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
+        Cripto("3", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
     )
 
     Column(
