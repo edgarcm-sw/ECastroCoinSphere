@@ -33,9 +33,66 @@ fun HomeScreen(innerPadding: PaddingValues) {
     )
 
     val topCriptos = listOf(
-        Cripto("1", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
-        Cripto("2", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
-        Cripto("3", "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png", "Bitcoin", "$115,876.50"),
+        Cripto(
+            "1",
+            "https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png",
+            "Bitcoin",
+            "$116,075.12"
+        ),
+        Cripto(
+            "2",
+            "https://www.creativefabrica.com/wp-content/uploads/2021/06/14/Cryptocurrency-Ethereum-Logo-Graphics-13394054-1.jpg",
+            "Ethereum",
+            "$4,685.27"
+        ),
+        Cripto(
+            "3",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQprv8mFkdSS3n8MfBE8HGGwJd_r9UbmECu2A&s",
+            "XRP",
+            "$3.13"
+        ),
+        Cripto(
+            "4",
+            "https://www.creativefabrica.com/wp-content/uploads/2021/06/14/Cryptocurrency-Tether-Usdt-Logo-BNW-Graphics-13393964-1.jpg",
+            "Tether",
+            "$1.00"
+        ),
+        Cripto(
+            "5",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Tq97-Pbo95DdBUs0rEHGDkQ4eBkl8gW3WA&s",
+            "Solana",
+            "$246.87"
+        ),
+        Cripto(
+            "6",
+            "https://cdn.pixabay.com/photo/2021/04/30/16/47/bnb-6219388_1280.png",
+            "BNB",
+            "$937.12"
+        ),
+        Cripto(
+            "7",
+            "https://files.swissborg.com/product/wealth-app/assets/ic_crypto_usdc.png",
+            "USD Coin",
+            "$0.99983"
+        ),
+        Cripto(
+            "8",
+            "https://www.citypng.com/public/uploads/preview/hd-dogecoin-logo-icon-coin-png-701751694779734rtff9rbuve.png",
+            "Dogecoin",
+            "$0.29"
+        ),
+        Cripto(
+            "9",
+            "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png",
+            "Cardano",
+            "$0.93"
+        ),
+        Cripto(
+            "10",
+            "https://zengo.com/wp-content/uploads/Tron.png",
+            "TRON",
+            "$0.35"
+        )
     )
 
     Column(
