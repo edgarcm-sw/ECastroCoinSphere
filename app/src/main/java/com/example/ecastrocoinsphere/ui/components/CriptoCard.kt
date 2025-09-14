@@ -50,7 +50,7 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
                 fontSize = 13.sp,
                 color = TextDim,
                 modifier = Modifier
-                    .weight(0.2f)
+                    .weight(0.3f)
                     .padding(start = 10.dp)
                 )
 
@@ -87,7 +87,7 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
                 fontSize = 16.sp,
                 color = TextMain,
                 modifier = Modifier
-                    .weight(1.4f)
+                    .weight(1.5f)
             )
         }
     }
