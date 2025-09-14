@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ecastrocoinsphere.ui.components.HeaderRow
 import com.example.ecastrocoinsphere.ui.components.TopCard
+import com.example.ecastrocoinsphere.ui.components.TopCripto
+import com.example.ecastrocoinsphere.ui.model.Cripto
 import com.example.ecastrocoinsphere.ui.theme.Background
 import com.example.ecastrocoinsphere.ui.theme.TextMain
 
@@ -28,6 +30,12 @@ fun HomeScreen(innerPadding: PaddingValues) {
         "Global Market Cap" to "$2.18T",
         "Fear & Greed" to "Neutral (54)",
         "Altcoin Season" to "No"
+    )
+
+    val topCriptos = listOf(
+        Cripto("1", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
+        Cripto("2", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
+        Cripto("3", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png", "Bitcoin", "$115,876.50"),
     )
 
     Column(
@@ -53,9 +61,11 @@ fun HomeScreen(innerPadding: PaddingValues) {
             }
         }
 
+        HeaderRow()
+
         LazyColumn {
-            item {
-                HeaderRow()
+            items(topCriptos) { (num, url, name, price) ->
+                TopCripto(num, url, name, price)
             }
         }
     }
