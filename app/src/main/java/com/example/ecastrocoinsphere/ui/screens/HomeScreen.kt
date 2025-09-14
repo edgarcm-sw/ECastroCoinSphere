@@ -5,8 +5,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -97,42 +99,39 @@ fun HomeScreen(innerPadding: PaddingValues) {
         )
     )
 
-    // Column para el acomodo de todos los elementos de la homescreen
-    Column(
+    // LazyColumn en el que estara toda la información del homescreen para mejor rendimiento de la App
+    LazyColumn(
         modifier = Modifier
             .fillMaxSize()
             .background(Background)
-            // Padding para la interfaz
             .padding(innerPadding)
-            .padding(horizontal = 10.dp)
+            .padding(horizontal = 10.dp),
+        contentPadding = PaddingValues(vertical = 2.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        // Titulo de la App
-        Text(
-            text = "CoinSphere",
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Bold,
-            color = TextMain,
-            modifier = Modifier
-                .padding(top = 10.dp, bottom = 10.dp)
-        )
-
-        // LazyColumn para las card de la parte superior iteradas con la lista de topCards
-        LazyColumn {
-            items(topCards) { (textS, textI) ->
-                // Card con el modelo de las card superiores
-                TopCard(textS, textI)
-            }
+        item {
+            Text(
+                text = "CoinSphere",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = TextMain,
+                modifier = Modifier.padding(top = 10.dp, bottom = 4.dp)
+            )
         }
 
-        // HeaderRow para el apartado de separación de las cards de las criptos "#", "Name" y "Price"
-        HeaderRow()
+        // Top cards como items separados
+        items(topCards) { (title, value) ->
+            TopCard(title, value)
+        }
 
-        // LazyColumn para las card de las Criptos iteradas con la lista de topCriptos
-        LazyColumn {
-            items(topCriptos) { (num, url, name, price) ->
-                // Card con el modelo de las card Criptos
-                TopCripto(num, url, name, price)
-            }
+        item {
+            Spacer(modifier = Modifier.height(4.dp))
+            HeaderRow()
+        }
+
+        // Lista de criptos
+        items(topCriptos) { cripto ->
+            TopCripto(cripto.num, cripto.url, cripto.name, cripto.price)
         }
     }
 }
