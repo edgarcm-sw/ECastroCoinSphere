@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ECastroCoinSphereTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // Le agrego el padding de la interfaz a la pantalla principal
                     HomeScreen(innerPadding)
                 }
             }
@@ -39,6 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     ECastroCoinSphereTheme {
+        // Ejecuto el HomeScreen como Pantalla principal al ejecutar
         HomeScreen(
             PaddingValues(20.dp)
         )

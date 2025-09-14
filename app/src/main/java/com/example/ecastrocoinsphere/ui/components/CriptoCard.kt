@@ -1,7 +1,6 @@
 package com.example.ecastrocoinsphere.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -10,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Divider
@@ -21,8 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -32,45 +28,8 @@ import com.example.ecastrocoinsphere.ui.theme.TextDim
 import com.example.ecastrocoinsphere.ui.theme.TextMain
 
 @Composable
-fun HeaderRow() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(
-            text = "#",
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
-            color = TextDim,
-            modifier = Modifier.weight(0.2f)
-        )
-        Text(
-            text = "Name",
-            fontWeight = FontWeight.Bold,
-            // fontFamily = FontFamily.SansSerif,
-            fontSize = 12.sp,
-            color = TextDim,
-            modifier = Modifier.weight(1f)
-        )
-        Text(
-            text = "Price",
-            fontWeight = FontWeight.Bold,
-            // fontFamily = FontFamily.SansSerif,
-            fontSize = 12.sp,
-            color = TextDim,
-            modifier = Modifier.weight(1f)
-        )
-    }
-    Divider(
-        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f),
-        thickness = 1.dp
-    )
-}
-
-@Composable
 fun TopCripto(num: String, url: String, name: String, price: String) {
+    // Box del diseño de las Card de las criptos
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -80,9 +39,11 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
             .background(Surface),
         contentAlignment = Alignment.CenterStart
     ) {
+        // Row para el acomodo de la información
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // Texto del numero de cada Cripto (num que sale de la lista creada en el homescreen)
             Text(
                 text = num,
                 fontWeight = FontWeight.Bold,
@@ -93,6 +54,7 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
                     .padding(start = 10.dp)
                 )
 
+            // Box con el diseño de la imagen traida de internet
             Box(
                 modifier = Modifier
                     .padding(start = 5.dp, end = 10.dp)
@@ -108,6 +70,7 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
                 )
             }
 
+            // Diseño del texto del nombre de la cripto (name de la lista creada)
             Text(
                 text = name,
                 fontWeight = FontWeight.Bold,
@@ -117,6 +80,7 @@ fun TopCripto(num: String, url: String, name: String, price: String) {
                     .weight(1f)
             )
 
+            // Diseño del precio de cada cripto (price de la lista creada)
             Text(
                 text = price,
                 fontWeight = FontWeight.Bold,

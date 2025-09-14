@@ -26,12 +26,14 @@ import com.example.ecastrocoinsphere.ui.theme.TextMain
 
 @Composable
 fun HomeScreen(innerPadding: PaddingValues) {
+    // Constante list para las card de la parte superior (la información de cada una)
     val topCards = listOf(
         "Global Market Cap" to "$2.18T",
         "Fear & Greed" to "Neutral (54)",
         "Altcoin Season" to "No"
     )
 
+    // Constante list para la Cripto Card, igual su información
     val topCriptos = listOf(
         Cripto(
             "1",
@@ -95,13 +97,16 @@ fun HomeScreen(innerPadding: PaddingValues) {
         )
     )
 
+    // Column para el acomodo de todos los elementos de la homescreen
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Background)
+            // Padding para la interfaz
             .padding(innerPadding)
             .padding(horizontal = 10.dp)
     ) {
+        // Titulo de la App
         Text(
             text = "CoinSphere",
             fontSize = 20.sp,
@@ -111,17 +116,21 @@ fun HomeScreen(innerPadding: PaddingValues) {
                 .padding(top = 10.dp, bottom = 10.dp)
         )
 
-
+        // LazyColumn para las card de la parte superior iteradas con la lista de topCards
         LazyColumn {
             items(topCards) { (textS, textI) ->
+                // Card con el modelo de las card superiores
                 TopCard(textS, textI)
             }
         }
 
+        // HeaderRow para el apartado de separación de las cards de las criptos "#", "Name" y "Price"
         HeaderRow()
 
+        // LazyColumn para las card de las Criptos iteradas con la lista de topCriptos
         LazyColumn {
             items(topCriptos) { (num, url, name, price) ->
+                // Card con el modelo de las card Criptos
                 TopCripto(num, url, name, price)
             }
         }

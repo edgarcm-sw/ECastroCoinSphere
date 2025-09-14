@@ -21,7 +21,9 @@ import com.example.ecastrocoinsphere.ui.theme.TextDim
 import com.example.ecastrocoinsphere.ui.theme.TextMain
 
 @Composable
+// Función para el diseño de las Cards superiores
 fun TopCard(textS: String, textI: String) {
+    // Box para el diseño de cada Card
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -31,10 +33,12 @@ fun TopCard(textS: String, textI: String) {
             .background(Surface),
         contentAlignment = Alignment.CenterStart
     ) {
+        // Column para el acomodo de la información de cada card
         Column(
             modifier = Modifier
                 .padding(10.dp)
         ) {
+            // Aquí estan el diseño del texto, se manda a llamar la constante list que se hizo en el homescreen
             Text(
                 text = textS,
                 color = TextDim,
